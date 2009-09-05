@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+developers = {
+  :dg => "David Goudreau",
+  :dmg => "David Goudreau",
+  :nw => "Nathan Wilmes",
+  :ncw => "Nathan Wilmes",
+  :ra => "Rajan Agaskar",
+  :rva => "Rajan Agaskar",
+  :rdy => "Ryan Dy",
+  :rd => "Ryan Dy",
+  :amp => "Aaron Peckham",
+  :eh => "Erik Hanson",
+  :xw => "Christian Williams",
+}
+
+if ARGV.size > 0
+  names =
+    ARGV.map do |arg|
+      raise "I don't know #{arg}" unless developers[arg.to_sym]
+      developers[arg.to_sym]
+    end
+
+  authors = names.join(" & ")
+
+  puts "Setting git config to use #{authors}"
+  system "git config --global user.name '#{authors}'"
+  system "git config --global user.email ops+github@pivotallabs.com"
+else
+  current_pair = `git config --global user.name`.chomp
+  puts "Pair is set to: #{current_pair}"
+end
