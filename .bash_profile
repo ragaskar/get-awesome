@@ -8,6 +8,7 @@ complete -C ~/get-awesome/rake_completion -o default rake
 
 alias gpp="git pull & git push"
 alias grep="grep --color"
+alias ls="ls --color"
 alias pair="~/get-awesome/pair $@"
 
 # search for a running process
