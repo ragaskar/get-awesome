@@ -1,6 +1,13 @@
+#puts port in path
+export PATH=$PATH:/opt/local/bin
+export MANPATH=$MANPATH:/opt/local/share/man
+export INFOPATH=$INFOPATH:/opt/local/share/info
+
+#shell colors
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagacad
 
+#tab completion
 if [ -f /opt/local/etc/bash_completion ]; then
    . /opt/local/etc/bash_completion
 fi
@@ -8,7 +15,6 @@ complete -C ~/get-awesome/rake_completion -o default rake
 
 alias gpp="git pull & git push"
 alias grep="grep --color"
-alias ls="ls --color"
 alias pair="~/get-awesome/pair $@"
 
 # search for a running process
@@ -16,6 +22,7 @@ function show {
   ps -ax | grep -v grep | grep "$1";
 }
 
+#git branch display
 function proml {
  local        BLUE="\[\033[0;34m\]"
  local         RED="\[\033[0;31m\]"
