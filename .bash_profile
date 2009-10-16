@@ -13,7 +13,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
 fi
 complete -C ~/get-awesome/rake_completion -o default rake
 
-alias gpp="git pull & git push"
+alias gpp="git pull && git push"
 alias grep="grep --color"
 alias pair="~/get-awesome/pair $@"
 
