@@ -1,17 +1,8 @@
 #!/usr/bin/env ruby
 
 developers = {
-  :dg => "David Goudreau",
-  :dmg => "David Goudreau",
-  :nw => "Nathan Wilmes",
-  :ncw => "Nathan Wilmes",
   :ra => "Rajan Agaskar",
   :rva => "Rajan Agaskar",
-  :rdy => "Ryan Dy",
-  :rd => "Ryan Dy",
-  :amp => "Aaron Peckham",
-  :eh => "Erik Hanson",
-  :xw => "Christian Williams",
 }
 
 if ARGV.size > 0
