@@ -2,6 +2,7 @@
 export PATH=$PATH:/opt/local/bin
 export MANPATH=$MANPATH:/opt/local/share/man
 export INFOPATH=$INFOPATH:/opt/local/share/info
+export EDITOR=vim
 
 #shell colors
 export CLICOLOR=1
@@ -16,6 +17,14 @@ complete -C ~/get-awesome/rake_completion -o default rake
 alias gpp="git pull && git push"
 alias grep="grep --color"
 alias pair="~/get-awesome/pair $@"
+
+#remove all gems
+function uninstall_all_gems {
+  INSTALLED_GEMS=`gem list --no-versions`;
+  for gem_name in $INSTALLED_GEMS; do
+sudo gem uninstall --a --ignore-dependencies $gem_name;
+  done
+}
 
 # search for a running process
 function show {
