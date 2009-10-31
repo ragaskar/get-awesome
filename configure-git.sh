@@ -11,3 +11,4 @@ git config --global color.diff auto
 git config --global color.interactive auto
 git config --global color.status auto
 
+git config --global alias.wtf '!bash -c "ruby ~/get-awesome/contrib/git-wtf"
