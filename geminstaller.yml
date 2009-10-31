@@ -1,0 +1,6 @@
+---
+gems:
+- name: open_gem
+  version: '>= 1.4.0'
+- name: cheat
+  version: '>= 1.2.1'
